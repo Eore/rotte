@@ -92,6 +92,22 @@ CREATE TABLE `pengajian_karyawan` (
 	PRIMARY KEY (`id`)
 );
 
+CREATE TABLE `pelamar` (
+	`id` int NOT NULL AUTO_INCREMENT,
+	`nama` varchar(150) NOT NULL,
+	`tgl_masuk` DATE NOT NULL,
+	`tgl_lahir` DATE NOT NULL,
+	`no_telpon_pribadi` varchar(20) NOT NULL,
+	`no_telpon_ayah` varchar(20) NOT NULL,
+	`no_telpon_ibu` varchar(20) NOT NULL,
+	`daerah_asal` varchar(50) NOT NULL,
+	`alamat` varchar(50) NOT NULL,
+	`pendidikan` varchar(50) NOT NULL,
+	`cv` varchar(255) NOT NULL,
+	`ijazah` varchar(255) NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
 ALTER TABLE `log_grade` ADD CONSTRAINT `log_grade_fk0` FOREIGN KEY (`badge`) REFERENCES `karyawan`(`badge`);
 
 ALTER TABLE `pelanggaran_karyawan` ADD CONSTRAINT `pelanggaran_karyawan_fk0` FOREIGN KEY (`badge`) REFERENCES `karyawan`(`badge`);
